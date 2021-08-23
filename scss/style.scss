@@ -143,19 +143,17 @@ a {
 	}
 
 	&__sup-title{
-		font-family: $primery-font-family;
-		font-style: italic;
-		font-size: 16px;
-		line-height: 24px;
-
+		
 		h5{
+			font-family: $primery-font-family;
+			font-style: italic;
+			font-size: 16px;
+			line-height: 24px;
 			margin: 0;
 		}
 	}
 
 	&-bar {
-		display: flex;
-		justify-content: space-between;
 		align-items: center;
 		padding-top: 40px;
 	}
@@ -198,7 +196,7 @@ a {
 
 	& a {
 		font-size: 16px;
-		font-weight: 700;
+		font-weight: 400;
 		color: $textcolor;
 		letter-spacing: 0.02em;
 		position: relative;
@@ -453,11 +451,24 @@ a {
 	}
 }
 
+.ba-post-block{
+	// display: flex;
+	// justify-content: space-around;
+}
+
+.ba-post{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 .ba-post-card{
 	background-color: #fff;
 	padding: 25px;
 	margin-top: 30px;
-
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	&__span{
 		position: absolute;
 		left: 0;
@@ -568,7 +579,11 @@ a {
 	margin-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
+	height: 1480px;
 	&-card{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		padding: 25px;
 		width: 50%;
 		border-bottom: 1px solid #e6e6e6;
@@ -640,7 +655,7 @@ a {
     background-color: #48974c;
     position: absolute;
     left: -20px;
-    top: 0;
+    top: 15%;
     width: 16px;
     height: 16px;
     z-index: 225;
@@ -687,6 +702,105 @@ a {
 				}
 			}
 		}
+		li:first-child{
+			margin-right: 10px;
+
+			a{
+				color: rgb(0, 0, 0);
+				background-color: rgba(15, 112, 67, 0.0);
+				padding: 0;
+			}
+		}
+		li:last-child{
+			margin-right: 10px;
+
+			a{
+				color: rgb(0, 0, 0);
+				background-color: rgba(15, 112, 67, 0.0);
+				padding: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.ba-pagination{
+		margin-top: 450px;
+	}
+}
+@media screen and (max-width: 970px) {
+	.ba-pagination{
+		margin-top: 350px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.ba-pagination{
+		margin-top: 260px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.ba-pagination{
+		margin-top: 150px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.ba-pagination{
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.ba-pagination{
+		margin-top: 2000px;
+	}
+}
+@media screen and (max-width: 470px) {
+	.ba-pagination{
+		margin-top: 1830px;
+	}
+}
+@media screen and (max-width: 440px) {
+	.ba-pagination{
+		margin-top: 1700px;
+	}
+}
+@media screen and (max-width: 420px) {
+	.ba-pagination{
+		margin-top: 1600px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.ba-pagination{
+		margin-top: 1480px;
+	}
+}
+@media screen and (max-width: 380px) {
+	.ba-pagination{
+		margin-top: 1380px;
+	}
+}
+@media screen and (max-width: 370px) {
+	.ba-pagination{
+		margin-top: 1350px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.ba-pagination{
+		margin-top: 1290px;
+	}
+}
+@media screen and (max-width: 350px) {
+	.ba-pagination{
+		margin-top: 1240px;
+	}
+}
+@media screen and (max-width: 336px) {
+	.ba-pagination{
+		margin-top: 1300px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.ba-pagination{
+		margin-top: 1220px;
 	}
 }
 
@@ -694,7 +808,6 @@ a {
 	.ba-pagination{
 		padding-right: 20px;
 		font-size: 14px;
-		margin-top: 20px;
 		margin-bottom: 30px;
 	
 		&__list{
@@ -713,7 +826,7 @@ a {
 	.ba-pagination{
 		padding: 0;
 		font-size: 10px;
-		margin-top: 20px;
+		// margin-top: 20px;
 		margin-bottom: 30px;
 	
 		&__list{
@@ -722,6 +835,21 @@ a {
 	
 				a{
 					padding: 5px 10px 5px 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 322px) {
+	.ba-pagination{
+		font-size: 8px;
+		&__list{
+			li{
+				margin-right: 5px;
+	
+				a{
+					padding: 5px 5px 5px 5px;
 				}
 			}
 		}
@@ -739,6 +867,7 @@ a {
 	position: relative;
 }
 
+
 @media screen and (max-width: 760px) {
 	.ba-button_before{
 		padding: 10px 20px 10px 10px;
@@ -748,6 +877,12 @@ a {
 @media screen and (max-width: 380px) {
 	.ba-button_before{
 		padding: 5px 20px 10px 5px;
+	}
+}
+@media screen and (max-width: 380px) {
+	.ba-button_before{
+		font-size: 10px;
+		padding: 5px 5px 5px 5px;
 	}
 }
 
@@ -762,6 +897,12 @@ a {
 	left: 60%;
 	bottom: 0;
 }
+@media screen and (max-width: 380px) {
+	.ba-before_icon::before {
+		display: none;
+	}
+}
+
 
 @media screen and (max-width: 760px) {
 	.ba-before_icon::before {
@@ -781,11 +922,6 @@ a {
 	color: $primery-color !important;
 }
 
-.ba-arrow{
-	padding: 0 !important;
-	background-color: none !important;
-}
-
 .ba-details-block{
 	height: 560px;
     width: 100%;
@@ -803,6 +939,44 @@ a {
 	}
 }
 
+.ba-search_form{
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 0px 50px 0px 20px;
+}
+@media screen and (max-width: 400px) {
+	.ba-details-block{
+		&-inner{
+			&__form{
+				input{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.ba-search_form{
+		font-size: 12px;
+		padding: 0px 20px 0px 10px;
+	}
+}
+@media screen and (max-width: 300px) {
+	.ba-details-block{
+		&-inner{
+			&__form{
+				input{
+					font-size: 10px;
+					width: 100px;
+				}
+			}
+		}
+	}
+	.ba-search_form{
+		font-size: 10px;
+		padding: 0px 20px 0px 10px;
+	}
+}
+
 @media screen and (max-width: 760px) {
 	.ba-details-block{
 		height: 300px;
@@ -817,6 +991,8 @@ a {
 
 .ba-contact{
 	margin-bottom: 60px;
+	display: flex;
+	align-items: center;
 	&-inner{
 		&__banner{
 			padding: 35px;
@@ -832,8 +1008,10 @@ a {
 		}
 
 		&__slider-block{
-			background-color: #fff;
+			// display: flex;
+			align-items: center;
 			height: 280px;
+			padding-top: 25px;
 			img{
 				display: block;
 				width: 100vw;
@@ -843,7 +1021,17 @@ a {
 		}
 	}
 }
-
+@media (min-width: 1020px) and (max-width: 1187px) {
+	.ba-contact{
+		&-inner{
+			&__banner{
+				background-color: #fff;
+				padding: 10px;
+				width: 350px;
+			}
+		}
+	}
+}
 @media screen and (max-width: 760px) {
 	.ba-contact{
 		&-inner{
@@ -854,10 +1042,53 @@ a {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1187px) {
 	.ba-slider-banner{
 		display: none;
 		width: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.ba-contact{
+		&-inner{
+			&__banner{
+				padding: 5px;
+				h3{	
+					padding-left: 5px;
+					font-size: 18px;
+				}
+				iframe{
+					width: 250px;
+				}
+			}
+	
+			&__slider-block{
+				// display: flex;
+				align-items: center;
+				height: 100%;
+				padding-top: 25px;
+				img{
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 317px) {
+	.ba-contact{
+		&-inner{
+			&__banner{
+				padding: 5px;
+				h3{	
+					padding-left: 5px;
+					font-size: 18px;
+				}
+				iframe{
+					width: 200px;
+				}
+			}
+		}
 	}
 }
 
