@@ -180,6 +180,7 @@ a {
 
 .ba-menu {
 	display: flex;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -190,7 +191,7 @@ a {
 	border-top: 1px solid #cccccc;
 	
 	& li {
-		padding-right: 60px;
+		// padding-right: 60px;
 		line-height: 1;
 	}
 
@@ -211,7 +212,7 @@ a {
 	.ba-menu {
 		
 		& li {
-			padding-right: 30px;
+			// padding-right: 30px;
 		}
 	
 		& a {
@@ -220,21 +221,21 @@ a {
 	}
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
 	.ba-menu-toggle {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
 	.ba-menu {
 		display: block;
 		height: 100vh;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
-		max-width: 250px;
+		width: 60%;
 		background: rgba(15, 112, 67, 0.9);
 		padding: 120px 20px 20px 0;
 		z-index: 5;
@@ -263,31 +264,44 @@ a {
 				top: -200px;
 				right: 130px;
 				position: absolute;
+				z-index: 10;
 				fill: $texthover;
 			}
 		}
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.ba-menu {
+		&-toggle {
+			& svg {
+				top: -220px;
+				// right: -100px;
+				right: -60%;
+				position: absolute;
+				fill: $texthover;
+			}
+		}
+	}
+}
 @media screen and (max-width: 400px) {
 	.ba-menu {
 		&-toggle {
 			& svg {
-				top: -200px;
-				right: 130px;
+				top: -250px;
+				right: -50%;
 				position: absolute;
 				fill: $texthover;
 			}
 		}
 	}
 }
-
-@media (min-width: 504px) and (max-width: 545px) {
+@media screen and (max-width: 320px) {
 	.ba-menu {
 		&-toggle {
 			& svg {
-				top: -200px;
-				right: 130px;
+				top: -250px;
+				right: -30%;
 				position: absolute;
 				fill: $texthover;
 			}
@@ -295,12 +309,25 @@ a {
 	}
 }
 
-@media (min-width: 503px) and (max-width: 767px) {
+@media (min-width: 504px) and (max-width: 599px) {
 	.ba-menu {
 		&-toggle {
 			& svg {
 				top: -150px;
-				right: 130px;
+				right: -100%;
+				position: absolute;
+				fill: $texthover;
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+	.ba-menu {
+		&-toggle {
+			& svg {
+				top: -150px;
+				right: -140%;
 				position: absolute;
 				fill: $texthover;
 			}
@@ -491,6 +518,7 @@ a {
 	&__info{
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		&--button{
 			font-size: 14px;
 			font-weight: bold;
@@ -498,7 +526,7 @@ a {
 			text-transform: uppercase;
 			color: $primery-color;
 			border: 1px solid $primery-color;
-			padding: 25px 40px;
+			padding: 20px 40px;
 		}
 		&--button:hover{
 			background-color: $primery-color;
@@ -555,6 +583,7 @@ a {
 .ba-social_list{
 	display: inline-flex;
 	list-style-type: none;
+	align-items: center;
 	li{
 		padding-left: 25px;
 	}
@@ -587,6 +616,7 @@ a {
 		padding: 25px;
 		width: 50%;
 		border-bottom: 1px solid #e6e6e6;
+		background-color: #fff;
 
 		&--left{
 			border-right: 1px solid #e6e6e6;
@@ -679,7 +709,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	padding-left: 20px;
-	padding-right: 90px;
+	padding-right: 72px;
 	align-items: center;
 	font-size: 20px;
 	margin-top: 30px;
@@ -723,6 +753,22 @@ a {
 	}
 }
 
+@media screen and (max-width: 1182px) {
+	.ba-pagination{
+		padding-left: 0px;
+		padding-right: 0px;
+
+		&__list{
+			li{
+				margin-right: 5px;
+	
+				a{
+					padding: 15px 25px 15px 25px;
+				}
+			}
+		}
+	}
+}
 @media screen and (max-width: 1024px) {
 	.ba-pagination{
 		margin-top: 450px;

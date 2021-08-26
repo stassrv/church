@@ -1141,6 +1141,9 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1150,7 +1153,6 @@ a:hover {
   border-top: 1px solid #cccccc;
 }
 .ba-menu li {
-  padding-right: 60px;
   line-height: 1;
 }
 .ba-menu a {
@@ -1165,26 +1167,23 @@ a:hover {
 }
 
 @media (min-width: 767px) and (max-width: 983px) {
-  .ba-menu li {
-    padding-right: 30px;
-  }
   .ba-menu a {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .ba-menu-toggle {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .ba-menu {
     display: block;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    max-width: 250px;
+    width: 60%;
     background: rgba(15, 112, 67, 0.9);
     padding: 120px 20px 20px 0;
     z-index: 5;
@@ -1214,29 +1213,46 @@ a:hover {
     top: -200px;
     right: 130px;
     position: absolute;
+    z-index: 10;
+    fill: #80dfaa;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ba-menu-toggle svg {
+    top: -220px;
+    right: -60%;
+    position: absolute;
     fill: #80dfaa;
   }
 }
 @media screen and (max-width: 400px) {
   .ba-menu-toggle svg {
-    top: -200px;
-    right: 130px;
+    top: -250px;
+    right: -50%;
     position: absolute;
     fill: #80dfaa;
   }
 }
-@media (min-width: 504px) and (max-width: 545px) {
+@media screen and (max-width: 320px) {
   .ba-menu-toggle svg {
-    top: -200px;
-    right: 130px;
+    top: -250px;
+    right: -30%;
     position: absolute;
     fill: #80dfaa;
   }
 }
-@media (min-width: 503px) and (max-width: 767px) {
+@media (min-width: 504px) and (max-width: 599px) {
   .ba-menu-toggle svg {
     top: -150px;
-    right: 130px;
+    right: -100%;
+    position: absolute;
+    fill: #80dfaa;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .ba-menu-toggle svg {
+    top: -150px;
+    right: -140%;
     position: absolute;
     fill: #80dfaa;
   }
@@ -1408,6 +1424,9 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ba-post-card__info--button {
   font-size: 14px;
@@ -1416,7 +1435,7 @@ a:hover {
   text-transform: uppercase;
   color: #48974c;
   border: 1px solid #48974c;
-  padding: 25px 40px;
+  padding: 20px 40px;
 }
 .ba-post-card__info--button:hover {
   background-color: #48974c;
@@ -1474,6 +1493,9 @@ a:hover {
   display: -ms-inline-flexbox;
   display: inline-flex;
   list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ba-social_list li {
   padding-left: 25px;
@@ -1517,6 +1539,7 @@ a:hover {
   padding: 25px;
   width: 50%;
   border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
 }
 .ba-sidebar-card--left {
   border-right: 1px solid #e6e6e6;
@@ -1603,7 +1626,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-left: 20px;
-  padding-right: 90px;
+  padding-right: 72px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1648,6 +1671,18 @@ a:hover {
   padding: 0;
 }
 
+@media screen and (max-width: 1182px) {
+  .ba-pagination {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .ba-pagination__list li {
+    margin-right: 5px;
+  }
+  .ba-pagination__list li a {
+    padding: 15px 25px 15px 25px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ba-pagination {
     margin-top: 450px;
